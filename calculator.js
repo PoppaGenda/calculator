@@ -1,3 +1,4 @@
+//used to clear the input values taken in iv
 function clear()
 {
 iv="";
@@ -48,12 +49,13 @@ function operate(operator,num1,num2)
 }
 //initialising variables
 let iv="";
-
+//to display output on screen
 function onScreen(output){
     const para1=document.querySelector("p");
     para1.textContent=output;
 
 }
+//to store value on screen ,i think it could be skipped and directly added into taking inputs
 function store(valueOfButton){
     const para=document.querySelector("p")
     para.textContent=valueOfButton;
@@ -61,7 +63,7 @@ function store(valueOfButton){
     takingInput(vb);
 }
 
-
+//it is used to take inputs
 
 function takingInput(vob)
 {
@@ -78,6 +80,7 @@ function takingInput(vob)
 
     }    
 }
+//to perform operation the string needs to be divided into two numbeer and one operator
 function divideString(ivv){
     for(let i=0;i<ivv.length;i++)
     {
@@ -100,7 +103,7 @@ function divideString(ivv){
 
     
 
-
+//dom
 
 const btn=document.querySelectorAll("button");
 btn.forEach((button)=>button.addEventListener('click',()=>store(button.value)));
